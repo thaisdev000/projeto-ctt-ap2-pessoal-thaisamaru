@@ -7,7 +7,7 @@ Go é uma linguagem de programação de código aberto criada pela Google, focad
 * Compilação direta para código de máquina.
 * Estaticamente tipada, mas com sintaxe limpa.
 * Gerenciamento de memória automático.
->
+
 
 ## Instalação e Versão
 Conforme o roadmap oficial, para verificar a instalação do Go no seu ambiente, utilize o comando:

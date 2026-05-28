@@ -9,5 +9,7 @@ if err != nil {
     log.Println("Erro ao calcular:", err)
     return
 }
+```
+```go
 fmt.Println("Sucesso:", resultado)
 ```

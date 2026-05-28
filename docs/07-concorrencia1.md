@@ -10,7 +10,7 @@ go executarTarefaPesada()
 ```
 >
 Múltiplas Goroutines rodam simultaneamente de forma assíncrona.
->
+
 ```bash
 go version
 ```

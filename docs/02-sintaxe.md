@@ -17,4 +17,3 @@ func main() {
 ```
 >
 O operador := só pode ser utilizado dentro de funções.
->
