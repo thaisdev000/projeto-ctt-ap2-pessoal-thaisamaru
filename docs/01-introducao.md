@@ -4,11 +4,14 @@ Go é uma linguagem de programação de código aberto criada pela Google, focad
 
 >
 **Por que usar Go?**
-> - Compilação direta para código de máquina.
+> 
+- Compilação direta para código de máquina.
 
-> - Estaticamente tipada, mas com sintaxe limpa.
+> 
+- Estaticamente tipada, mas com sintaxe limpa.
 
-> - Gerenciamento de memória automático.
+> 
+- Gerenciamento de memória automático.
 
 
 ## Instalação e Versão
