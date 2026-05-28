@@ -8,8 +8,9 @@ Basta adicionar a palavra-chave `go` antes da chamada de uma função:
 ```go
 go executarTarefaPesada()
 ```
->[!NOTE]
+>
 Múltiplas Goroutines rodam simultaneamente de forma assíncrona.
-[!NOTE]
+>
 ```bash
 go version
+```

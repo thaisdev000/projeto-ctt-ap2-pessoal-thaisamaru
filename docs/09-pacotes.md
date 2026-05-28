@@ -7,3 +7,4 @@ Para criar um novo módulo no seu terminal de desenvolvimento local:
 
 ```bash
 go mod init meu-projeto-go
+```

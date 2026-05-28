@@ -18,3 +18,4 @@ func main() {
     mensagem := <-meuCanal 
     fmt.Println(mensagem)
 }
+```

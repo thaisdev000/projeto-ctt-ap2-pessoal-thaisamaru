@@ -13,3 +13,4 @@ func main() {
     a := Aluno{Nome: "Thais", Idade: 21}
     fmt.Println(a.Nome)
 }
+```

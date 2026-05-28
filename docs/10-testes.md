@@ -16,3 +16,4 @@ func TestSoma(t *testing.T) {
         t.Errorf("Esperava 5, mas obteve %d", resultado)
     }
 }
+```

@@ -15,6 +15,6 @@ func main() {
     fmt.Printf("Nome: %s, Idade: %d\n", nome, idade)
 }
 ```
->[!TIP]
+>
 O operador := só pode ser utilizado dentro de funções.
->[!TIP]
+>
