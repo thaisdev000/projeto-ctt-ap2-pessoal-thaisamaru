@@ -1,6 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/A5LZMZew)
 
-# Projeto CTT-AP2: Documentação do Roadmap de Go
+# EXEMPLO DE ENTREGA!!!!
+Projeto CTT-AP2: Documentação do Roadmap de Go
 
 Este repositório contém a documentação técnica sobre a linguagem Go (Golang), cobrindo desde os conceitos fundamentais de sintaxe até tópicos avançados como concorrência e testes automatizados. O projeto foi desenvolvido utilizando a ferramenta **Zensical** para geração de sites estáticos e implantado automaticamente via **GitHub Pages**.
 
