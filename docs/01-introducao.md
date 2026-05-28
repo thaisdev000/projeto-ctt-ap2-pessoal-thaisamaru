@@ -14,3 +14,4 @@ Conforme o roadmap oficial, para verificar a instalação do Go no seu ambiente,
 
 ```bash
 go version
+```

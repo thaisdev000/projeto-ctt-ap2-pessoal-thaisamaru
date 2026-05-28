@@ -7,3 +7,7 @@ Basta adicionar a palavra-chave `go` antes da chamada de uma função:
 
 ```go
 go executarTarefaPesada()
+```
+:::info
+Múltiplas Goroutines rodam simultaneamente de forma assíncrona.
+:::
