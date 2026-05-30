@@ -1,3 +1,7 @@
+---
+icon: lucide/layers
+---
+
 # Arrays, Slices e Maps
 
 O roadmap divide as coleções em três pilares fundamentais: Arrays, Slices e Maps.
