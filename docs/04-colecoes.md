@@ -2,11 +2,18 @@
 icon: lucide/layers
 ---
 
-# Arrays, Slices e Maps
+# Arrays, Slices e Maps: Anatomia e Performance
 
-No ecossistema Go, entender a estrutura de dados não se resume a conhecer a sintaxe, mas sim compreender como o *runtime* manipula a memória subjacente. A eficiência de microsserviços de alta escala depende diretamente de como Arrays, Slices e Maps alocam, copiam e liberam espaço no *Heap* e no *Stack*.
+No Go, gerenciar coleções de dados de forma eficiente exige entender como o *runtime* manipula a memória. A escolha entre um Array, um Slice ou um Map afeta diretamente o uso de CPU e o tempo de resposta do seu sistema.
 
 ---
+## Introdução
+
+Diferente de outras linguagens onde coleções são sempre ponteiros ocultos, o Go expõe o comportamento real da memória:
+
+* **Arrays** são blocos fixos e contínuos. Mudar o tamanho exige criar um array novo. Passar um array para uma função **copia todos os elementos na memória**.
+* **Slices** são apenas ponteiros leves (headers de 24 bytes) que apontam para um array oculto. Passá-los para funções é ultra-rápido.
+* **Maps** são tabelas hash dinâmicas baseadas no algoritmo de *Swiss Tables*, que lêem grupos de dados em paralelo a nível de hardware.
 
 ## Arrays
 Um **Array** em Go é um bloco contíguo de memória com um tamanho fixo determinado em tempo de compilação. Diferente de linguagens como Java ou C#, onde os arrays são ponteiros implícitos, no Go os arrays são **valores**.
@@ -123,4 +130,13 @@ func main() {
 }
 ```
 !!! warning "`Insegurança Concorrente`"
-    Maps não possuem travas internas contra condições de corrida (Data Races). Duas rotinas paralelas modificando o mesmo mapa derrubam o binário imediatamente com uma falha crítica de pânico. Use exclusão   mútua (sync.Mutex) se houver concorrência.
+    Maps nativos não possuem travas contra acessos simultâneos. Se duas Goroutines escreverem no mesmo mapa juntas, o programa crasha na hora.
+
+### Resumo
+
+| Critério Técnico | Array | Slice | Map |
+| :--- | :--- | :--- | :--- |
+| **Tipo de Alocação** | Estática e Contígua | Dinâmica (Ponteiro) | Dinâmica (Swiss Tables) |
+| **Passagem de Parâmetro** | Cópia de todos os elementos | Cópia do Header (24 bytes) | Cópia de Ponteiro de Estrutura |
+| **Uso Recomendado** | Buffers de tamanho fixo, Criptografia | Listas de dados, Iterações gerais | Dicionários, Índices, Busca Rápida |
+| **Custo de Busca** | O(n) linear | O(n) linear | O(1) constante por SIMD |
