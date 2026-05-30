@@ -2,14 +2,14 @@
 icon: lucide/git-fork
 ---
 
-# Estrutura de controles
+## Estrutura de controles
 Estruturas de controle determinam o **fluxo de execução** de um programa. Ou seja, quais instruções serão executadas, em qual ordem e quantas vezes. Ele oferece três estruturas principais: `if`, `for` e `switch`.
 
-## If / Else
+### If / Else
 
 O `if` executa um bloco de código apenas se uma condição for verdadeira.
 
-### Sintaxe básica
+#### Sintaxe básica
 
 ```go
 idade := 18
@@ -24,7 +24,7 @@ if idade >= 18 {
 
 ---
 
-### If / Else
+#### If / Else
 
 ```go
 idade := 15
@@ -38,7 +38,7 @@ if idade >= 18 {
 
 ---
 
-### If / Else if / Else
+#### If / Else if / Else
 
 ```go
 nota := 75
@@ -54,7 +54,7 @@ if nota >= 90 {
 
 ---
 
-### If com inicialização
+#### If com inicialização
 
 O Go permite declarar uma variável **dentro do próprio `if`**. No entanto ela existirá apenas dentro do bloco:
 
@@ -76,11 +76,11 @@ if x := 10; x > 5 { // (1)
     }
     ```
 
-## For
+### For
 
 O `for` é a **única estrutura de repetição do Go**, mas é flexível o suficiente para substituir o `while` e o `foreach` de outras linguagens.
 
-### For tradicional (estilo C)
+#### For tradicional (estilo C)
 
 ```go
 for i := 0; i < 5; i++ { // (1)
@@ -101,7 +101,7 @@ Saída:
 
 ---
 
-### For como While
+#### For como While
 
 Omitindo a inicialização e o incremento, o `for` se comporta como um `while`:
 
@@ -116,7 +116,7 @@ for contador < 5 {
 
 ---
 
-### Loop infinito
+#### Loop infinito
 
 Omitindo tudo, o loop roda para sempre. Por isso é útil em servidores e processos contínuos:
 
@@ -129,7 +129,7 @@ for {
 
 ---
 
-### For com Range
+#### For com Range
 
 O `range` percorre **slices, arrays, maps e strings** de forma simples:
 
@@ -160,7 +160,7 @@ for _, fruta := range frutas {
 
 ---
 
-### Break e Continue
+#### Break e Continue
 
 `break` interrompe o loop imediatamente. `continue` pula para a próxima iteração:
 
@@ -186,11 +186,11 @@ Saída:
 6
 ```
 
-## Switch
+### Switch
 
 O `switch` compara um valor com múltiplos casos, sendo mais limpo que vários `else if` seguidos.
 
-### Sintaxe básica
+#### Sintaxe básica
 
 ```go
 dia := "segunda"
@@ -210,7 +210,7 @@ default:
 
 ---
 
-### Switch com inicialização
+#### Switch com inicialização
 
 Assim como o `if`, o `switch` aceita uma inicialização antes da condição:
 
@@ -229,7 +229,7 @@ default:
 
 ---
 
-### Switch sem condição
+#### Switch sem condição
 
 Quando omitida a condição, o `switch` funciona como uma sequência de `if/else` — avaliando cada `case` como uma expressão booleana:
 
@@ -250,7 +250,7 @@ default:
 
 ---
 
-### Fallthrough
+#### Fallthrough
 
 Se você quiser que a execução **continue para o próximo case**, use `fallthrough`:
 
@@ -277,7 +277,7 @@ Dois
 !!! warning "Use com cautela"
     O `fallthrough` executa o próximo `case` **independente da condição**. Use apenas quando realmente necessário.
 
-## Resumo
+### Resumo
 
 | Estrutura | Uso principal |
 |-----------|---------------|
