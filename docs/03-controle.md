@@ -2,7 +2,7 @@
 icon: lucide/git-fork
 ---
 
-## Estrutura de controles
+# Estrutura de controles
 Estruturas de controle determinam o **fluxo de execução** de um programa. Ou seja, quais instruções serão executadas, em qual ordem e quantas vezes. Ele oferece três estruturas principais: `if`, `for` e `switch`.
 
 ### If / Else
